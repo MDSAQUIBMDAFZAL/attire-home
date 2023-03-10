@@ -1,0 +1,256 @@
+<html>
+
+<head>
+    <title>Payment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="image/logo.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--css file -->
+    <link rel="stylesheet" href="./css/payment.css">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container-xl">
+                <div class="row header-body">
+
+                    <!-- ARIA is a set of attributes we can add to HTML elements that define ways to make web content and applications accessible to users with disabilities who use assistive technologies  -->
+                    <div class="socialmedia col-md-2 justify-content-md-start justify-content-center" role="group"
+                        tabindex="0" aria-label="social media">
+                        <a class="navbar-brand" href="#"><img src="images\facebook round.png" alt="facebook"
+                                aria-label="follow company on facebook"></a>
+                        <a class="navbar-brand" href="#"><img src="images\Group 2556.png" alt="youtube"
+                                aria-label="follow company on youtube"></a>
+                        <a class="navbar-brand" href="#"><img src="images\Group 2557.png" alt="twitter"
+                                aria-label="follow company on twitter"></a>
+                    </div>
+                    <div class="searchbar col-md-4 justify-content-center">
+                        <input type="search" class="form-control" placeholder="Search products& Brands"
+                            aria-label="Search">
+                        <img src="images\Group 2558.png" alt="search">
+                    </div>
+                    <div class="details col-md-6 justify-content-md-end justify-content-center">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a id="contact-no" class="nav-link" href="tel:+91 9838203720"><img
+                                        src="images\Group 2559.png" alt="contact">+91 9838203720</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Seller_page.html">Sell On Company</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Download App</a>
+                            </li>
+                            <li class="selector nav-item">
+                                <img id="selector-img" src="images\india.png" alt="flag">
+
+                                <!-- JavaScript event onchange -->
+                                <select id="countriesList" class="countries" onchange="countriesFunction()">
+                                    <option value="india">India</option>
+                                    <option value="usa">USA</option>
+                                    <option value="uk">UK</option>
+                                    <option value="germany">Germany</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript event onclick -->
+        <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollTopFunction()"><i
+                class="fas fa-chevron-up"></i></button>
+
+        <div class="header-bottom" id="stickyHeader">
+            <!-- Containers are the most basic layout element in Bootstrap and are required when using our default grid system. -->
+            <div class="container-xl pad-sm-10">
+
+                <!-- Navbar Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, collapse plugin, and more. -->
+                <nav class="navbar navbar-expand-md navbar-light nav-list">
+                    <a href="./index.html"> <img src="./images/shopping-bag-icon.png" alt="logo"></a>
+
+                    <!-- The hamburger menu is the button in websites that typically opens up into a side menu or navigation drawer. An easy way to communicate to users that the button contained a list of items. Here hamburger opens at medium device-->
+                    <button class="navbar-toggler toggle-button" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="headernav navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu active"
+                                    href="./product_list.html">Categories</a>
+                                <ul class="submenu">
+                                    <li><a href="./product_list.html">Men</a></li>
+                                    <li><a href="./product_list.html">Women</a></li>
+                                    <li><a href="./product_list.html">Ethnic</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./my_profile.html">Profile</a>
+                                <ul class="submenu">
+                                    <li><a href="./my_profile.html">My Profile</a></li>
+                                    <li><a href="./edit_profile.html">Edit Profile</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./my_orders.html">Orders</a>
+                                <ul class="submenu">
+                                    <li><a href="./my_orders.html">My Orders</a></li>
+                                    <li><a href="./track_order.html">Track Orders</a></li>
+                                    <li><a href="./return_order.html">Return Orders</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./my_wishlist.html"><i
+                                        class="fas fa-heart"></i> Wishlist <span id="myWishlistItem">0</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-position headernav-menu" href="./my_carts.html"><i
+                                        class="fas fa-shopping-cart"></i>
+                                    Cart <span id="myCartItem">0</span></a>
+                            </li>
+                        </ul>
+                        <!-- Button trigger modal -->
+                        <button class="my-2 my-sm-0 btn-signin" type="submit" data-toggle="modal"
+                            data-target="#Modal-container">SIGN
+                            IN</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="col-sm-12 col-md img text-center">
+        <a href="https://rzp.io/l/U3OdyVoGp"><img src="./images/online_payment.jpg" class="img-fluid pt-2"
+                width=30%></a>
+    </div>
+    <!-- footer -->
+    <footer class="bg-dark py-5">
+        <div class="container">
+            <div class="row text-white g-4">
+                <div class="col-md-6 col-lg-3">
+                    <a class="text-uppercase text-decoration-none brand text-white" href="./index.html">Attire</a>
+                    <p class="text-white text-muted mt-3">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
+                        ducimus sapiente est, hic ratione eius itaque id quisquam
+                        assumenda qui accusantium obcaecati aperiam! Nisi ipsa adipisci
+                        molestias aliquid blanditiis natus.
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light">Links</h5>
+                    <ul class="">
+                        <li class="my-3">
+                            <a href="./index.html" class="text-white text-decoration-none text-muted">
+                                <i class="fas fa-chevron-right me-1"></i>Home
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="./index.html" class="text-white text-decoration-none text-muted">
+                                <i class="fas fa-chevron-right me-1"></i>Collection
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="./index.html" class="text-white text-decoration-none text-muted">
+                                <i class="fas fa-chevron-right me-1"></i>Blogs
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="./index.html" class="text-white text-decoration-none text-muted">
+                                <i class="fas fa-chevron-right me-1"></i>About Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light mb-3">Contact Us</h5>
+                    <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class="me-3">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class="fw-light">
+                            Albert Street, New York, As 756, United States of America
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class="me-3">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="fw-light"> attire.support@gmail.com </span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class="me-3">
+                            <i class="fas fa-phone-alt"></i>
+                        </span>
+                        <span class="fw-light"> +9786 6776 236 </span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-light mb-3">Follow Us</h5>
+                    <div>
+                        <ul class="list-unstyled d-flex">
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank"
+                                    class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-facebook-f"> </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/login" target="_blank"
+                                    class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-twitter"> </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank"
+                                    class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-instagram"> </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/" target="_blank"
+                                    class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-youtube"> </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/" target="_blank"
+                                    class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-linkedin"> </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://in.pinterest.com/" target="_blank"
+                                    class="text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class="fab fa-pinterest"> </i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollTopFunction()">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </footer>
+    <!-- end of footer -->
+</body>
+
+</html>

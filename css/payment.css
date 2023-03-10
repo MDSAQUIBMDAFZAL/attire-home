@@ -1,0 +1,89 @@
+@import url("./style.css");
+@import url(./main.css );
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* footer */
+footer .brand {
+    font-family: var(--pink);
+    letter-spacing: 2px;
+    transition: box-shadow var(--duration-default) ease-in-out;
+}
+
+footer a {
+    transition: color 0.3s ease;
+    transition: box-shadow var(--duration-default) ease-in-out;
+}
+
+footer a:hover {
+    color: var(--pink) !important;
+    transition: box-shadow var(--duration-default) ease-in-out;
+}
+
+/* blue button on bottom to reach the top again using JavaScript*/
+.scroll-top-btn {
+    background-color: #0099cc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    right: 25px;
+    bottom: 35px;
+    color: #ffffff;
+    position: fixed;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    border: 2px solid #0099cc;
+    padding: 1px;
+}
+
+.scroll-top-btn:hover {
+    box-shadow: 0px 0px 17px 0px var(--pink);
+}
+
+/* submenu style sheet when hover into header bottom navigation */
+.submenu {
+    list-style: none;
+    padding: 0 0.5vw;
+    display: none;
+    border-top: 0.3em solid #fd6e00;
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 100;
+    width: 10%;
+    box-shadow: 0px 0px 20px -8px #fd6e00;
+    transition: ease 0.5s;
+    border-radius: 1.7em;
+}
+
+.submenu li a {
+    display: block;
+    font-size: 14px;
+}
+
+.submenu li {
+    margin-bottom: 0.5vw;
+}
+
+.headernav-menu:hover+.submenu,
+.submenu:hover {
+    display: block;
+}
+
+.submenu a:hover {
+    color: #fd6e00;
+    text-decoration: none;
+}
+
+/*______________________________________________________ */
+
+/* media queries */
+@media (min-width: 992px) {
+    .nav-item {
+        border-bottom: none;
+    }
+}
